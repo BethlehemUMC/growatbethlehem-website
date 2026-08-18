@@ -4,29 +4,65 @@ pageClass: "home"
 title: "Welcome"
 description: "A traditional United Methodist congregation in Hutchinson, Minnesota, gathered around Scripture, hymn singing, and service to our neighbors."
 permalink: "/"
+hero:
+  image: "/images/sanctuary-cross-08bd5e1f7d.jpg"
+  imageAlt: "Sanctuary cross"
+  headline: "Bethlehem is a place where people love God and one another."
+  subtext: "A Christian life wasn't meant to be lived in isolation. We invite you to grow in your faith, alongside a community that will walk with you."
+  buttonText: "Watch our worship service"
+  buttonLink: "https://www.facebook.com/BUMC.HUTCH"
+  serviceTime1: "Sundays at 9:00 a.m. — in person and livestreamed on Facebook"
+  serviceTime2: "Also on HCVN (Hutchinson Cable Network), Sundays 3:00 p.m. and Wednesdays 9:00 p.m. — Nuvera Ch. 10 & 910HD or Mediacom Ch. 8 & 107.3"
+newHere:
+  image: "/images/fellowship-meal-b867b049d2.jpg"
+  imageAlt: "Fellowship meal"
+  heading: "New here?"
+  paragraph1: "Relax. Dress how you want. Be yourself. You are welcome, just as you are."
+  paragraph2: "We're at 665 Miller Ave SW in Hutchinson, two blocks north of the Rec Center/pool — with plenty of parking and full accessibility."
+  linkText: "Learn more"
+worship:
+  heading: "Worship rooted in Scripture"
+  paragraph1: "At Bethlehem, the Bible comes first. Our preaching is grounded in Scripture, and our worship carries on a tradition of singing the hymns of faith together — because in many ways, our congregation is our choir."
+  paragraph2: "If you're looking for a church home that holds fast to God's Word and still loves to sing the old songs, you'll find it here."
+  image: "/images/congregation-singing-hymns-ff6e775116.jpg"
+  imageAlt: "Congregation singing hymns"
+weAreChurch:
+  image: "/images/food-for-kidz-volunteer-abf05a5cb5.jpg"
+  imageAlt: "Food for Kidz volunteer"
+  heading: "We are the church"
+  paragraph: "Bethlehem is a warm and authentic community — one that leaves the world better than we found it. From packing nearly 40,000 meals through Food for Kidz in 2025 to hosting neighbors at Trunk or Treat, service isn't something we talk about. It's something we do."
+  linkText: "See how we serve"
+giving:
+  heading: "Giving back to God"
+  verse: "“Give, and it will be given to you.” — Luke 6:38"
+  paragraph: "Through faith in Christ we are transformed into generous people. Regular giving helps keep our church alive and reminds us to always put God first."
+  linkText: "Learn about giving"
+footerImage:
+  image: "/images/church-exterior-at-dusk-273132a480.jpg"
+  imageAlt: "Church exterior at dusk"
 ---
 <div class="hero">
-    <img src="/images/sanctuary-cross-08bd5e1f7d.jpg" alt="Sanctuary cross">
+    <img src="{{ hero.image }}" alt="{{ hero.imageAlt }}">
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <h1>Bethlehem is a place where people<br>love God and one another.</h1>
-      <p>A Christian life wasn't meant to be lived in isolation. We invite you to grow in your faith, alongside a community that will walk with you.</p>
-      <a class="btn-primary" href="https://www.facebook.com/BUMC.HUTCH" target="_blank">Watch our worship service</a>
-      <div class="service-time">Sundays at 9:00 a.m. — in person and livestreamed on Facebook</div>
-      <div class="service-time">Also on HCVN (Hutchinson Cable Network), Sundays 3:00 p.m. and Wednesdays 9:00 p.m. — Nuvera Ch. 10 &amp; 910HD or Mediacom Ch. 8 &amp; 107.3</div>
+      <h1>{{ hero.headline }}</h1>
+      <p>{{ hero.subtext }}</p>
+      <a class="btn-primary" href="{{ hero.buttonLink }}" target="_blank">{{ hero.buttonText }}</a>
+      <div class="service-time">{{ hero.serviceTime1 }}</div>
+      <div class="service-time">{{ hero.serviceTime2 | safe }}</div>
     </div>
   </div>
 
   <section class="band-light">
     <div class="two-col">
       <div>
-        <img src="/images/fellowship-meal-b867b049d2.jpg" alt="Fellowship meal">
+        <img src="{{ newHere.image }}" alt="{{ newHere.imageAlt }}">
       </div>
       <div>
-        <h2>New here?</h2>
-        <p>Relax. Dress how you want. Be yourself. You are welcome, just as you are.</p>
-        <p style="margin-top:12px;">We're at 665 Miller Ave SW in Hutchinson, two blocks north of the Rec Center/pool — with plenty of parking and full accessibility.</p>
-        <p style="margin-top:16px;"><a class="link-out" href="newhere.html">Learn more &rarr;</a></p>
+        <h2>{{ newHere.heading }}</h2>
+        <p>{{ newHere.paragraph1 }}</p>
+        <p style="margin-top:12px;">{{ newHere.paragraph2 }}</p>
+        <p style="margin-top:16px;"><a class="link-out" href="newhere.html">{{ newHere.linkText }} &rarr;</a></p>
       </div>
     </div>
   </section>
@@ -34,12 +70,12 @@ permalink: "/"
   <section class="band-cream">
     <div class="two-col">
       <div>
-        <h2>Worship rooted in Scripture</h2>
-        <p>At Bethlehem, the Bible comes first. Our preaching is grounded in Scripture, and our worship carries on a tradition of singing the hymns of faith together &mdash; because in many ways, our congregation <em>is</em> our choir.</p>
-        <p style="margin-top:12px;">If you're looking for a church home that holds fast to God's Word and still loves to sing the old songs, you'll find it here.</p>
+        <h2>{{ worship.heading }}</h2>
+        <p>{{ worship.paragraph1 }}</p>
+        <p style="margin-top:12px;">{{ worship.paragraph2 }}</p>
       </div>
       <div>
-        <img src="/images/congregation-singing-hymns-ff6e775116.jpg" alt="Congregation singing hymns">
+        <img src="{{ worship.image }}" alt="{{ worship.imageAlt }}">
       </div>
     </div>
   </section>
@@ -47,23 +83,23 @@ permalink: "/"
   <section class="band-light">
     <div class="two-col">
       <div>
-        <img src="/images/food-for-kidz-volunteer-abf05a5cb5.jpg" alt="Food for Kidz volunteer">
+        <img src="{{ weAreChurch.image }}" alt="{{ weAreChurch.imageAlt }}">
       </div>
       <div>
-        <h2>We are the church</h2>
-        <p>Bethlehem is a warm and authentic community &mdash; one that leaves the world better than we found it. From packing nearly 40,000 meals through Food for Kidz in 2025 to hosting neighbors at Trunk or Treat, service isn't something we talk about. It's something we do.</p>
-        <p style="margin-top:16px;"><a class="link-out" href="service.html">See how we serve &rarr;</a></p>
+        <h2>{{ weAreChurch.heading }}</h2>
+        <p>{{ weAreChurch.paragraph }}</p>
+        <p style="margin-top:16px;"><a class="link-out" href="service.html">{{ weAreChurch.linkText }} &rarr;</a></p>
       </div>
     </div>
   </section>
 
   <section class="band-cream section-narrow" style="text-align:center; max-width: 600px;">
-    <h2>Giving back to God</h2>
-    <p class="verse">&ldquo;Give, and it will be given to you.&rdquo; &mdash; Luke 6:38</p>
-    <p>Through faith in Christ we are transformed into generous people. Regular giving helps keep our church alive and reminds us to always put God first.</p>
-    <p style="margin-top:16px;"><a class="link-out" href="give.html">Learn about giving &rarr;</a></p>
+    <h2>{{ giving.heading }}</h2>
+    <p class="verse">{{ giving.verse | safe }}</p>
+    <p>{{ giving.paragraph }}</p>
+    <p style="margin-top:16px;"><a class="link-out" href="give.html">{{ giving.linkText }} &rarr;</a></p>
   </section>
 
   <div style="position:relative; height:340px; overflow:hidden;">
-    <img src="/images/church-exterior-at-dusk-273132a480.jpg" alt="Church exterior at dusk" style="width:100%; height:100%; object-fit:cover; object-position: center 35%; display:block;">
+    <img src="{{ footerImage.image }}" alt="{{ footerImage.imageAlt }}" style="width:100%; height:100%; object-fit:cover; object-position: center 35%; display:block;">
   </div>
