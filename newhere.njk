@@ -1,50 +1,74 @@
-      - name: "newhere"
-        label: "New Here? Page"
-        file: "newhere.njk"
-        fields:
-          - { label: "Page Title (browser tab)", name: "title", widget: "string" }
-          - { label: "Description (for search engines)", name: "description", widget: "text" }
-          - label: "Hero (top banner)"
-            name: "hero"
-            widget: "object"
-            fields:
-              - { label: "Background Photo", name: "image", widget: "image" }
-              - { label: "Photo Description (for accessibility)", name: "imageAlt", widget: "string" }
-              - { label: "Headline", name: "heading", widget: "string" }
-              - { label: "Subtext", name: "subtext", widget: "text" }
-          - label: "Welcome Intro"
-            name: "intro"
-            widget: "object"
-            fields:
-              - { label: "Bold Welcome Paragraph", name: "paragraph", widget: "text" }
-          - label: "Worship"
-            name: "worship"
-            widget: "object"
-            fields:
-              - { label: "Heading", name: "heading", widget: "string" }
-              - { label: "Paragraph", name: "paragraph", widget: "text" }
-          - label: "Fellowship"
-            name: "fellowship"
-            widget: "object"
-            fields:
-              - { label: "Heading", name: "heading", widget: "string" }
-              - { label: "Paragraph", name: "paragraph", widget: "text" }
-          - label: "Parking & Accessibility"
-            name: "parking"
-            widget: "object"
-            fields:
-              - { label: "Heading", name: "heading", widget: "string" }
-              - { label: "Paragraph", name: "paragraph", widget: "text" }
-          - label: "Children"
-            name: "children"
-            widget: "object"
-            fields:
-              - { label: "Heading", name: "heading", widget: "string" }
-              - { label: "Paragraph", name: "paragraph", widget: "text" }
-          - label: "Holy Communion"
-            name: "communion"
-            widget: "object"
-            fields:
-              - { label: "Heading", name: "heading", widget: "string" }
-              - { label: "Paragraph 1", name: "paragraph1", widget: "text" }
-              - { label: "Paragraph 2", name: "paragraph2", widget: "text" }
+---
+layout: base.njk
+pageClass: "newhere"
+title: "New Here?"
+description: "Planning your first visit to Bethlehem United Methodist Church in Hutchinson, Minnesota."
+permalink: "/newhere/"
+hero:
+  image: "/images/fellowship-gathering-05ad4bf01c.jpg"
+  imageAlt: "Fellowship gathering"
+  heading: "New Here?"
+  subtext: "If you're planning a visit to Bethlehem, here are a few things to know."
+intro:
+  paragraph: "We are glad you are here! We've been in your shoes. We admire that you're on this journey. Relax. Dress how you want. Be yourself. You are welcome, just as you are."
+worship:
+  heading: "Worship"
+  paragraph: "Sundays at 9:00 a.m. We're at 665 Miller Ave SW in Hutchinson — two blocks north of the Rec Center/pool."
+fellowship:
+  heading: "Fellowship"
+  paragraph: "We're a social bunch! During worship, we take time to greet one another — expect handshakes, hugs, and friendly conversation. On the second Sunday of each month, we gather for Second Sunday Treats after worship. Throughout the year, we come together for potlucks and the occasional catered dinner, and every Wednesday during Lent we share a Soup Supper before a short evening service."
+parking:
+  heading: "Parking & Accessibility"
+  paragraph: "We've got lots of parking, with handicapped spots available in the lot, on Miller Ave, and those who need closer access are welcome to park in our circle drive. An elevator near the front entrance takes you down to the Fellowship Hall."
+children:
+  heading: "Children"
+  paragraph: "Children of all ages are always welcome in worship. We have worship activity bags for kids as you enter the sanctuary. If your child needs a different space for a while, the nursery — next to the accessible bathroom — is available for parents to use with their kids (it isn't staffed, so parents stay with their children there). It also has a changing table in a dedicated bathroom."
+communion:
+  heading: "Holy Communion"
+  paragraph1: "Communion is usually offered on the first Sunday of every month. All are welcome at the table, no matter age or church affiliation."
+  paragraph2: "From March through November, we also offer drive-through communion at 10:15 a.m. — drive up in our circle driveway to receive prayer and communion."
+---
+<div class="hero">
+    <img src="{{ hero.image }}" alt="{{ hero.imageAlt }}">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>{{ hero.heading }}</h1>
+      <p>{{ hero.subtext }}</p>
+    </div>
+  </div>
+
+  <section class="band-light section-narrow">
+    <div class="topic">
+      <p><strong>{{ intro.paragraph }}</strong></p>
+    </div>
+
+    <div class="topic">
+      <h2>{{ worship.heading }}</h2>
+      <p>{{ worship.paragraph }}</p>
+    </div>
+
+    <div class="topic">
+      <h2>{{ fellowship.heading }}</h2>
+      <p>{{ fellowship.paragraph }}</p>
+    </div>
+
+    <div class="topic">
+      <h2>{{ parking.heading }}</h2>
+      <p>{{ parking.paragraph }}</p>
+    </div>
+
+    <div class="topic">
+      <h2>{{ children.heading }}</h2>
+      <p>{{ children.paragraph }}</p>
+    </div>
+
+    <div class="topic">
+      <h2>{{ communion.heading }}</h2>
+      <p>{{ communion.paragraph1 }}</p>
+      <p style="margin-top:8px;">{{ communion.paragraph2 }}</p>
+    </div>
+  </section>
+
+  <section class="band-cream section-narrow" style="text-align:center;">
+    <p>Check out our <a href="https://www.facebook.com/BUMC.HUTCH" target="_blank" style="color:#b5602a; text-decoration:none;">Facebook page</a> to see upcoming events.</p>
+  </section>
