@@ -1,42 +1,25 @@
-- name: "about"
-        label: "About Page"
-        file: "about.njk"
-        fields:
-          - { label: "Page Title (browser tab)", name: "title", widget: "string" }
-          - { label: "Description (for search engines)", name: "description", widget: "text" }
-          - label: "Hero (top banner)"
-            name: "hero"
-            widget: "object"
-            fields:
-              - { label: "Background Photo", name: "image", widget: "image" }
-              - { label: "Photo Description (for accessibility)", name: "imageAlt", widget: "string" }
-              - { label: "Headline", name: "heading", widget: "string" }
-          - label: "'You Will Grow' Section"
-            name: "grow"
-            widget: "object"
-            fields:
-              - { label: "Heading", name: "heading", widget: "string" }
-              - { label: "Paragraph", name: "paragraph", widget: "text" }
-          - label: "'You Belong Here' Section"
-            name: "belong"
-            widget: "object"
-            fields:
-              - { label: "Heading", name: "heading", widget: "string" }
-              - { label: "Paragraph", name: "paragraph", widget: "text" }
-          - label: "Meet Our Pastor"
-            name: "pastor"
-            widget: "object"
-            fields:
-              - { label: "Pastor Photo", name: "image", widget: "image" }
-              - { label: "Photo Description (for accessibility)", name: "imageAlt", widget: "string" }
-              - { label: "Bio", name: "bio", widget: "text" }
-          - label: "Our History"
-            name: "history"
-            widget: "object"
-            fields:
-              - { label: "History Photo", name: "image", widget: "image" }
-              - { label: "Photo Description (for accessibility)", name: "imageAlt", widget: "string" }
-              - { label: "Paragraph 1", name: "paragraph1", widget: "text" }
-              - { label: "Paragraph 2", name: "paragraph2", widget: "text" }
-              - { label: "Paragraph 3", name: "paragraph3", widget: "text" }
-              - { label: "Paragraph 4", name: "paragraph4", widget: "text" }
+---
+layout: base.njk
+pageClass: "about"
+title: "About"
+description: "A traditional United Methodist congregation in Hutchinson, Minnesota, gathered around Scripture, hymn singing, and service to our neighbors."
+permalink: "/about/"
+hero:
+  image: "/images/sanctuary-pews-and-stained-glass-e0d56b6efb.jpg"
+  imageAlt: "Sanctuary pews and stained glass"
+  heading: "About Bethlehem"
+grow:
+  heading: "You Will Grow at Bethlehem"
+  paragraph: "The wisest decision we can make each day is this: I will walk with God today. At Bethlehem, we're committed to walking with you."
+belong:
+  heading: "You Belong Here"
+  paragraph: "Christianity is more than a belief system; it's a belong system. At Bethlehem every individual matters. We look out for each other and wholeheartedly welcome visitors."
+pastor:
+  image: "/images/pastor-randy-koppen-173b1c9507.jpg"
+  imageAlt: "Pastor Randy Koppen"
+  bio: "Pastor Randy Koppen loves Jesus and chocolate, including but not limited to M&Ms and Reese's Peanut Butter Cups. He enjoys garden flowers and a good war movie. Randy is married to Sandy, a Hutchinson native, and together they enjoy playing cards and laughing with friends."
+history:
+  image: "/images/acoma-church-28c9daab48.jpg"
+  imageAlt: "Acoma Church"
+  paragraph1: "Bethlehem's roots reach back to 1859, when the first minister began a church in Acoma Township, and Biscay in 1860. The Hutchinson Evangelical Association church started in the 1880s, to which the Biscay and Acoma congregations later folded into. In 1947 the Evangelical Association merged with the United Brethren Church to form the Evangelical United Brethren Church (EUB). In 1968, the EUB joined with the Methodist Church to become The United Methodist Church — and Bethlehem United Methodist Church as we know it today."
+  paragraph2: "In November 1958, after eleven years of planning, the congregation dedicated
