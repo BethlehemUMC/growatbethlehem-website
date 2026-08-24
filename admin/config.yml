@@ -169,13 +169,59 @@ collections:
               - { label: "Paragraph 1", name: "paragraph1", widget: "text" }
               - { label: "Paragraph 2", name: "paragraph2", widget: "text" }
 
-      - name: "service"
+            - name: "service"
         label: "Service Page"
         file: "service.njk"
         fields:
           - { label: "Page Title (browser tab)", name: "title", widget: "string" }
           - { label: "Description (for search engines)", name: "description", widget: "text" }
-          - { label: "Page Content (HTML)", name: "body", widget: "code", default_language: "html", allow_language_selection: false, output_code_only: true }
+          - label: "Hero (top banner)"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Background Photo", name: "image", widget: "image" }
+              - { label: "Photo Description (for accessibility)", name: "imageAlt", widget: "string" }
+              - { label: "Headline", name: "heading", widget: "string" }
+          - label: "In Our Community"
+            name: "community"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Paragraph 1", name: "paragraph1", widget: "text" }
+              - { label: "Paragraph 2", name: "paragraph2", widget: "text" }
+              - { label: "Photo", name: "image", widget: "image" }
+              - { label: "Photo Description (for accessibility)", name: "imageAlt", widget: "string" }
+          - label: "Food for Kidz"
+            name: "foodForKidz"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Paragraph", name: "paragraph", widget: "text" }
+              - { label: "Stat Line", name: "stat", widget: "string" }
+              - { label: "Photo", name: "image", widget: "image" }
+              - { label: "Photo Description (for accessibility)", name: "imageAlt", widget: "string" }
+          - label: "Trunk or Treat"
+            name: "trunkOrTreat"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Paragraph", name: "paragraph", widget: "text" }
+              - { label: "Stat Line", name: "stat", widget: "string" }
+              - { label: "Photo", name: "image", widget: "image" }
+              - { label: "Photo Description (for accessibility)", name: "imageAlt", widget: "string" }
+          - label: "Midwest Mission Collection Site"
+            name: "midwestMission"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Paragraph", name: "paragraph1", widget: "text" }
+              - { label: "Photo", name: "image", widget: "image" }
+              - { label: "Photo Description (for accessibility)", name: "imageAlt", widget: "string" }
+          - label: "See It in Action"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
 
       - name: "give"
         label: "Give Page"
