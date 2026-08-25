@@ -7,6 +7,7 @@ permalink: "/give/"
 hero:
   image: "/images/offering-plate-in-the-sanctuary-8e6fc29867.jpg"
   imageAlt: "Offering plate in the sanctuary"
+  imagePosition: 50
   heading: "Give"
 intro:
   verse: "\"Give, and it will be given to you.\" — Luke 6:38"
@@ -22,7 +23,7 @@ byText:
   number: "44321"
 ---
 <div class="hero">
-    <img src="{{ hero.image }}" alt="{{ hero.imageAlt }}">
+    <img src="{{ hero.image }}" alt="{{ hero.imageAlt }}" style="object-position: center {{ hero.imagePosition | default(50) }}%;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <h1>{{ hero.heading }}</h1>

@@ -42,8 +42,6 @@ nav a {
 .page-give .hero { height: 320px; }
 .page-service .hero { height: 300px; }
 .page-contact .hero { height: 360px; }
-.page-contact .hero img { object-position: center 5%; }
-.page-home .hero img { object-position: center 15%; }
 
 /* ===== Sections ===== */
 section { padding: 52px 40px; }
@@ -73,7 +71,7 @@ p { margin-bottom: 12px; font-size: 16px; }
 .page-give .intro { text-align: center; margin-bottom: 32px; }
 
 .pastor { display: grid; grid-template-columns: 220px 1fr; gap: 36px; align-items: center; }
-.pastor img { width: 100%; border-radius: 6px; display: block; }
+.pastor img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 6px; display: block; }
 .history-stub {
   border: 1px dashed #c9bfa9; border-radius: 6px; padding: 20px 24px;
   background: #fbf8f2; font-size: 14px; color: #7a6f5c; font-style: italic;
