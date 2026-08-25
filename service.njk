@@ -7,6 +7,7 @@ permalink: "/service/"
 hero:
   image: "/images/food-for-kidz-volunteer-abf05a5cb5.jpg"
   imageAlt: "Food for Kidz volunteer"
+  imagePosition: 50
   heading: "Serve God by Serving Others"
 community:
   heading: "In Our Community"
@@ -35,7 +36,7 @@ cta:
   heading: "See It in Action"
 ---
 <div class="hero">
-    <img src="{{ hero.image }}" alt="{{ hero.imageAlt }}">
+    <img src="{{ hero.image }}" alt="{{ hero.imageAlt }}" style="object-position: center {{ hero.imagePosition | default(50) }}%;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <h1>{{ hero.heading }}</h1>

@@ -7,6 +7,7 @@ permalink: "/newhere/"
 hero:
   image: "/images/fellowship-gathering-05ad4bf01c.jpg"
   imageAlt: "Fellowship gathering"
+  imagePosition: 50
   heading: "New Here?"
   subtext: "If you're planning a visit to Bethlehem, here are a few things to know."
 intro:
@@ -29,7 +30,7 @@ communion:
   paragraph2: "From March through November, we also offer drive-through communion at 10:15 a.m. — drive up in our circle driveway to receive prayer and communion."
 ---
 <div class="hero">
-    <img src="{{ hero.image }}" alt="{{ hero.imageAlt }}">
+    <img src="{{ hero.image }}" alt="{{ hero.imageAlt }}" style="object-position: center {{ hero.imagePosition | default(50) }}%;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <h1>{{ hero.heading }}</h1>

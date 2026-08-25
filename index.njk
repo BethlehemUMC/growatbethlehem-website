@@ -2,6 +2,7 @@
 footerImage:
   image: /images/church-exterior-at-dusk-273132a480.jpg
   imageAlt: Church exterior at dusk
+  imagePosition: 35
 pageClass: home
 layout: base.njk
 permalink: /
@@ -12,6 +13,7 @@ description: "A traditional United Methodist congregation in Hutchinson,
 hero:
   image: /images/sanctuary-cross-08bd5e1f7d.jpg
   imageAlt: Sanctuary cross
+  imagePosition: 15
   headline: Bethlehem is a place where people love God and one another.
   subtext: A Christian life wasn't meant to be lived in isolation. We invite you
     to grow in your faith, alongside a community that will walk with you.
@@ -55,7 +57,7 @@ giving:
   linkText: Learn about giving
 ---
 <div class="hero">
-    <img src="{{ hero.image }}" alt="{{ hero.imageAlt }}">
+    <img src="{{ hero.image }}" alt="{{ hero.imageAlt }}" style="object-position: center {{ hero.imagePosition | default(50) }}%;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <h1>{{ hero.headline }}</h1>
@@ -114,5 +116,5 @@ giving:
   </section>
 
   <div style="position:relative; height:340px; overflow:hidden;">
-    <img src="{{ footerImage.image }}" alt="{{ footerImage.imageAlt }}" style="width:100%; height:100%; object-fit:cover; object-position: center 35%; display:block;">
+    <img src="{{ footerImage.image }}" alt="{{ footerImage.imageAlt }}" style="width:100%; height:100%; object-fit:cover; object-position: center {{ footerImage.imagePosition | default(50) }}%; display:block;">
   </div>

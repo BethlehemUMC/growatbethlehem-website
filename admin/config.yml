@@ -26,6 +26,7 @@ collections:
             fields:
               - { label: "Background Photo", name: "image", widget: "image" }
               - { label: "Photo Description (for accessibility)", name: "imageAlt", widget: "string" }
+              - { label: "Photo Vertical Position", name: "imagePosition", widget: "number", value_type: "int", min: 0, max: 100, default: 15, hint: "0 shows the top of the photo, 50 is centered, 100 shows the bottom. Nudge this if part of the photo gets cropped off oddly." }
               - { label: "Headline", name: "headline", widget: "string" }
               - { label: "Subtext", name: "subtext", widget: "text" }
               - { label: "Button Text", name: "buttonText", widget: "string" }
@@ -74,6 +75,7 @@ collections:
             fields:
               - { label: "Photo", name: "image", widget: "image" }
               - { label: "Photo Description (for accessibility)", name: "imageAlt", widget: "string" }
+              - { label: "Photo Vertical Position", name: "imagePosition", widget: "number", value_type: "int", min: 0, max: 100, default: 35, hint: "0 shows the top of the photo, 50 is centered, 100 shows the bottom. Nudge this if part of the photo gets cropped off oddly." }
 
       - name: "about"
         label: "About Page"
@@ -87,6 +89,7 @@ collections:
             fields:
               - { label: "Background Photo", name: "image", widget: "image" }
               - { label: "Photo Description (for accessibility)", name: "imageAlt", widget: "string" }
+              - { label: "Photo Vertical Position", name: "imagePosition", widget: "number", value_type: "int", min: 0, max: 100, default: 50, hint: "0 shows the top of the photo, 50 is centered, 100 shows the bottom. Nudge this if part of the photo gets cropped off oddly." }
               - { label: "Headline", name: "heading", widget: "string" }
           - label: "'You Will Grow' Section"
             name: "grow"
@@ -106,6 +109,7 @@ collections:
             fields:
               - { label: "Pastor Photo", name: "image", widget: "image" }
               - { label: "Photo Description (for accessibility)", name: "imageAlt", widget: "string" }
+              - { label: "Photo Vertical Position", name: "imagePosition", widget: "number", value_type: "int", min: 0, max: 100, default: 50, hint: "0 shows the top of the photo, 50 is centered, 100 shows the bottom. Nudge this if the photo gets cropped off oddly (e.g. top of head cut off)." }
               - { label: "Bio", name: "bio", widget: "text" }
           - label: "Our History"
             name: "history"
@@ -130,6 +134,7 @@ collections:
             fields:
               - { label: "Background Photo", name: "image", widget: "image" }
               - { label: "Photo Description (for accessibility)", name: "imageAlt", widget: "string" }
+              - { label: "Photo Vertical Position", name: "imagePosition", widget: "number", value_type: "int", min: 0, max: 100, default: 50, hint: "0 shows the top of the photo, 50 is centered, 100 shows the bottom. Nudge this if part of the photo gets cropped off oddly." }
               - { label: "Headline", name: "heading", widget: "string" }
               - { label: "Subtext", name: "subtext", widget: "text" }
           - label: "Welcome Intro"
@@ -181,6 +186,7 @@ collections:
             fields:
               - { label: "Background Photo", name: "image", widget: "image" }
               - { label: "Photo Description (for accessibility)", name: "imageAlt", widget: "string" }
+              - { label: "Photo Vertical Position", name: "imagePosition", widget: "number", value_type: "int", min: 0, max: 100, default: 50, hint: "0 shows the top of the photo, 50 is centered, 100 shows the bottom. Nudge this if part of the photo gets cropped off oddly." }
               - { label: "Headline", name: "heading", widget: "string" }
           - label: "In Our Community"
             name: "community"
@@ -235,6 +241,7 @@ collections:
             fields:
               - { label: "Background Photo", name: "image", widget: "image" }
               - { label: "Photo Description (for accessibility)", name: "imageAlt", widget: "string" }
+              - { label: "Photo Vertical Position", name: "imagePosition", widget: "number", value_type: "int", min: 0, max: 100, default: 50, hint: "0 shows the top of the photo, 50 is centered, 100 shows the bottom. Nudge this if part of the photo gets cropped off oddly." }
               - { label: "Headline", name: "heading", widget: "string" }
           - label: "Intro"
             name: "intro"
@@ -276,6 +283,7 @@ collections:
             fields:
               - { label: "Background Photo", name: "image", widget: "image" }
               - { label: "Photo Description (for accessibility)", name: "imageAlt", widget: "string" }
+              - { label: "Photo Vertical Position", name: "imagePosition", widget: "number", value_type: "int", min: 0, max: 100, default: 5, hint: "0 shows the top of the photo, 50 is centered, 100 shows the bottom. Nudge this if part of the photo gets cropped off oddly." }
               - { label: "Headline", name: "heading", widget: "string" }
           - label: "Intro"
             name: "intro"

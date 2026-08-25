@@ -7,6 +7,7 @@ permalink: "/contact/"
 hero:
   image: "/images/bethlehem-umc-exterior-48130362bc.jpg"
   imageAlt: "Bethlehem UMC exterior"
+  imagePosition: 5
   heading: "Contact Us"
 intro:
   paragraph: "We'd love to hear from you. Reach out any of the ways below, or just stop by — we're at 665 Miller Ave SW, two blocks north of the Rec Center/pool."
@@ -26,7 +27,7 @@ worship:
   paragraph2: "Also on HCVN (Hutchinson Cable Network), Sundays 3:00 p.m. and Wednesdays 9:00 p.m. — Nuvera Ch. 10 & 910HD or Mediacom Ch. 8 & 107.3"
 ---
 <div class="hero">
-    <img src="{{ hero.image }}" alt="{{ hero.imageAlt }}">
+    <img src="{{ hero.image }}" alt="{{ hero.imageAlt }}" style="object-position: center {{ hero.imagePosition | default(50) }}%;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <h1>{{ hero.heading }}</h1>

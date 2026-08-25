@@ -7,6 +7,7 @@ permalink: "/about/"
 hero:
   image: "/images/sanctuary-pews-and-stained-glass-e0d56b6efb.jpg"
   imageAlt: "Sanctuary pews and stained glass"
+  imagePosition: 50
   heading: "About Bethlehem"
 grow:
   heading: "You Will Grow at Bethlehem"
@@ -17,6 +18,7 @@ belong:
 pastor:
   image: "/images/pastor-randy-koppen-173b1c9507.jpg"
   imageAlt: "Pastor Randy Koppen"
+  imagePosition: 50
   bio: "Pastor Randy Koppen loves Jesus and chocolate, including but not limited to M&Ms and Reese's Peanut Butter Cups. He enjoys garden flowers and a good war movie. Randy is married to Sandy, a Hutchinson native, and together they enjoy playing cards and laughing with friends."
 history:
   image: "/images/acoma-church-28c9daab48.jpg"
@@ -27,7 +29,7 @@ history:
   paragraph4: "In 2024, Bethlehem celebrated its 165th anniversary, honoring generations of families — some now four, five, and six generations deep — who have called this congregation home."
 ---
 <div class="hero">
-    <img src="{{ hero.image }}" alt="{{ hero.imageAlt }}">
+    <img src="{{ hero.image }}" alt="{{ hero.imageAlt }}" style="object-position: center {{ hero.imagePosition | default(50) }}%;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <h1>{{ hero.heading }}</h1>
@@ -46,7 +48,7 @@ history:
     <div class="section-narrow">
       <h2>Meet Our Pastor</h2>
       <div class="pastor">
-        <img src="{{ pastor.image }}" alt="{{ pastor.imageAlt }}">
+        <img src="{{ pastor.image }}" alt="{{ pastor.imageAlt }}" style="object-position: center {{ pastor.imagePosition | default(50) }}%;">
         <p style="margin:0;">{{ pastor.bio }}</p>
       </div>
     </div>
