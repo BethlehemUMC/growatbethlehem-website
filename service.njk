@@ -1,53 +1,100 @@
-      - name: "service"
-        label: "Service Page"
-        file: "service.njk"
-        fields:
-          - { label: "Page Title (browser tab)", name: "title", widget: "string" }
-          - { label: "Description (for search engines)", name: "description", widget: "text" }
-          - label: "Hero (top banner)"
-            name: "hero"
-            widget: "object"
-            fields:
-              - { label: "Background Photo", name: "image", widget: "image" }
-              - { label: "Photo Description (for accessibility)", name: "imageAlt", widget: "string" }
-              - { label: "Headline", name: "heading", widget: "string" }
-          - label: "In Our Community"
-            name: "community"
-            widget: "object"
-            fields:
-              - { label: "Heading", name: "heading", widget: "string" }
-              - { label: "Paragraph 1", name: "paragraph1", widget: "text" }
-              - { label: "Paragraph 2", name: "paragraph2", widget: "text" }
-              - { label: "Photo", name: "image", widget: "image" }
-              - { label: "Photo Description (for accessibility)", name: "imageAlt", widget: "string" }
-          - label: "Food for Kidz"
-            name: "foodForKidz"
-            widget: "object"
-            fields:
-              - { label: "Heading", name: "heading", widget: "string" }
-              - { label: "Paragraph", name: "paragraph", widget: "text" }
-              - { label: "Stat Line", name: "stat", widget: "string" }
-              - { label: "Photo", name: "image", widget: "image" }
-              - { label: "Photo Description (for accessibility)", name: "imageAlt", widget: "string" }
-          - label: "Trunk or Treat"
-            name: "trunkOrTreat"
-            widget: "object"
-            fields:
-              - { label: "Heading", name: "heading", widget: "string" }
-              - { label: "Paragraph", name: "paragraph", widget: "text" }
-              - { label: "Stat Line", name: "stat", widget: "string" }
-              - { label: "Photo", name: "image", widget: "image" }
-              - { label: "Photo Description (for accessibility)", name: "imageAlt", widget: "string" }
-          - label: "Midwest Mission Collection Site"
-            name: "midwestMission"
-            widget: "object"
-            fields:
-              - { label: "Heading", name: "heading", widget: "string" }
-              - { label: "Paragraph", name: "paragraph1", widget: "text" }
-              - { label: "Photo", name: "image", widget: "image" }
-              - { label: "Photo Description (for accessibility)", name: "imageAlt", widget: "string" }
-          - label: "See It in Action"
-            name: "cta"
-            widget: "object"
-            fields:
-              - { label: "Heading", name: "heading", widget: "string" }
+---
+layout: base.njk
+pageClass: "service"
+title: "Service"
+description: "How Bethlehem United Methodist Church serves our neighbors in Hutchinson and beyond."
+permalink: "/service/"
+hero:
+  image: "/images/food-for-kidz-volunteer-abf05a5cb5.jpg"
+  imageAlt: "Food for Kidz volunteer"
+  heading: "Serve God by Serving Others"
+community:
+  heading: "In Our Community"
+  paragraph1: "For nearly 30 years, Bethlehem has been a founding partner of the Common Cup Ministry, a coalition of churches serving McLeod County. Through Common Cup, our congregation hosts the annual Fall Coat Giveaway, prepares and serves meals, and provides school supplies, personal care items, and emergency shelter support to neighbors in need."
+  paragraph2: "We also maintain a long-standing partnership with the McLeod County Food Shelf, delivering donations twice a month and contributing financially — including a $10,000 gift in 2025 — to help meet growing need across the county."
+  image: "/images/coat-drive-sorting-by-size-0a16cecab6.jpg"
+  imageAlt: "Coat drive sorting by size"
+foodForKidz:
+  heading: "Food for Kidz"
+  paragraph: "For 12 years running, Bethlehem has funded and hosted a Food for Kidz meal-packing event — bringing together nearly 140 volunteers, from senior citizens to the local high school football team, to pack meals for food shelves here and around the world."
+  stat: "Nearly 40,000 meals packed in 2025."
+  image: "/images/food-for-kidz-volunteers-packing-meals-775c8e4ca2.jpg"
+  imageAlt: "Food for Kidz volunteers packing meals"
+trunkOrTreat:
+  heading: "Trunk or Treat"
+  paragraph: "Each fall, Bethlehem opens its doors — and its trunks — for a community-wide Trunk or Treat, now a 12-year tradition. It's become a favorite not just for our congregation but for neighbors across Hutchinson, many of whom volunteer their own vehicles and time."
+  stat: "More than 400 children attend each year."
+  image: "/images/trunk-or-treat-9f7020deb8.jpg"
+  imageAlt: "Trunk or Treat"
+midwestMission:
+  heading: "Midwest Mission Collection Site"
+  paragraph1: "Bethlehem serves as a regional collection site for Midwest Mission, supporting projects like Dignity Kits and school supply drives for children in need around the world."
+  image: "/images/dignity-kit-packing-b6558908ce.jpg"
+  imageAlt: "Dignity Kit packing"
+cta:
+  heading: "See It in Action"
+---
+<div class="hero">
+    <img src="{{ hero.image }}" alt="{{ hero.imageAlt }}">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>{{ hero.heading }}</h1>
+    </div>
+  </div>
+
+  <section class="band-light">
+    <div class="two-col">
+      <div class="text-col">
+        <h2>{{ community.heading }}</h2>
+        <p>{{ community.paragraph1 }}</p>
+        <p style="margin-top:10px;">{{ community.paragraph2 }}</p>
+      </div>
+      <div class="img-col">
+        <img src="{{ community.image }}" alt="{{ community.imageAlt }}">
+      </div>
+    </div>
+  </section>
+
+  <section class="band-cream">
+    <div class="two-col reverse">
+      <div class="img-col">
+        <img src="{{ foodForKidz.image }}" alt="{{ foodForKidz.imageAlt }}">
+      </div>
+      <div class="text-col">
+        <h2>{{ foodForKidz.heading }}</h2>
+        <p>{{ foodForKidz.paragraph }}</p>
+        <div class="stat">{{ foodForKidz.stat }}</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band-light">
+    <div class="two-col">
+      <div class="text-col">
+        <h2>{{ trunkOrTreat.heading }}</h2>
+        <p>{{ trunkOrTreat.paragraph }}</p>
+        <div class="stat">{{ trunkOrTreat.stat }}</div>
+      </div>
+      <div class="img-col">
+        <img src="{{ trunkOrTreat.image }}" alt="{{ trunkOrTreat.imageAlt }}">
+      </div>
+    </div>
+  </section>
+
+  <section class="band-cream">
+    <div class="two-col reverse">
+      <div class="img-col">
+        <img src="{{ midwestMission.image }}" alt="{{ midwestMission.imageAlt }}">
+      </div>
+      <div class="text-col">
+        <h2>{{ midwestMission.heading }}</h2>
+        <p>{{ midwestMission.paragraph1 }}</p>
+        <p style="margin-top:10px; font-size:14px;">If you're looking to donate items through Midwest Mission, please start at <a class="link-out" href="https://www.midwestmission.org/collection-sites" target="_blank">midwestmission.org</a> &mdash; they can answer questions about what's needed and connect you with drop-off details.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band-light" style="text-align:center;">
+    <h2 style="margin-bottom:10px;">{{ cta.heading }}</h2>
+    <p>Want to see these ministries in motion? Follow along on our <a class="link-out" href="https://www.facebook.com/BUMC.HUTCH" target="_blank">Facebook page</a> for photos and updates from Food for Kidz, Trunk or Treat, and more.</p>
+  </section>
