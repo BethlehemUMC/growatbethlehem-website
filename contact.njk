@@ -4,40 +4,60 @@ pageClass: "contact"
 title: "Contact"
 description: "Get in touch with Bethlehem United Methodist Church in Hutchinson, Minnesota."
 permalink: "/contact/"
+hero:
+  image: "/images/bethlehem-umc-exterior-48130362bc.jpg"
+  imageAlt: "Bethlehem UMC exterior"
+  heading: "Contact Us"
+intro:
+  paragraph: "We'd love to hear from you. Reach out any of the ways below, or just stop by — we're at 665 Miller Ave SW, two blocks north of the Rec Center/pool."
+address:
+  line1: "665 Miller Ave SW"
+  line2: "Hutchinson, MN 55350"
+phone:
+  number: "(320) 587-3312"
+email:
+  address: "growatbethlehem@gmail.com"
+officeHours:
+  days: "Monday – Thursday"
+  time: "9:00 a.m. – 3:00 p.m."
+worship:
+  heading: "Sunday Worship"
+  paragraph1: "9:00 a.m. — in person and livestreamed"
+  paragraph2: "Also on HCVN (Hutchinson Cable Network), Sundays 3:00 p.m. and Wednesdays 9:00 p.m. — Nuvera Ch. 10 & 910HD or Mediacom Ch. 8 & 107.3"
 ---
 <div class="hero">
-    <img src="/images/bethlehem-umc-exterior-48130362bc.jpg" alt="Bethlehem UMC exterior">
+    <img src="{{ hero.image }}" alt="{{ hero.imageAlt }}">
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <h1>Contact Us</h1>
+      <h1>{{ hero.heading }}</h1>
     </div>
   </div>
 
   <section class="band-light section-narrow">
-    <p style="margin-bottom: 8px;">We'd love to hear from you. Reach out any of the ways below, or just stop by &mdash; we're at 665 Miller Ave SW, two blocks north of the Rec Center/pool.</p>
+    <p style="margin-bottom: 8px;">{{ intro.paragraph }}</p>
 
     <div class="info-grid">
       <div class="info-block">
         <h3>Address</h3>
-        <div class="value">665 Miller Ave SW<br>Hutchinson, MN 55350</div>
+        <div class="value">{{ address.line1 }}<br>{{ address.line2 }}</div>
       </div>
       <div class="info-block">
         <h3>Phone</h3>
-        <div class="value"><a href="tel:3205873312">(320) 587-3312</a></div>
+        <div class="value"><a href="tel:3205873312">{{ phone.number }}</a></div>
       </div>
       <div class="info-block">
         <h3>Email</h3>
-        <div class="value"><a href="mailto:growatbethlehem@gmail.com">growatbethlehem@gmail.com</a></div>
+        <div class="value"><a href="mailto:{{ email.address }}">{{ email.address }}</a></div>
       </div>
       <div class="info-block">
         <h3>Office Hours</h3>
-        <div class="value">Monday &ndash; Thursday<br>9:00 a.m. &ndash; 3:00 p.m.</div>
+        <div class="value">{{ officeHours.days }}<br>{{ officeHours.time }}</div>
       </div>
     </div>
   </section>
 
   <section class="band-cream section-narrow">
-    <h2>Sunday Worship</h2>
-    <p style="margin-top:6px;">9:00 a.m. &mdash; in person and livestreamed on <a href="https://www.facebook.com/BUMC.HUTCH" target="_blank" style="color:#b5602a; text-decoration:none;">Facebook</a></p>
-    <p style="margin-top:6px;">Also on HCVN (Hutchinson Cable Network), Sundays 3:00 p.m. and Wednesdays 9:00 p.m. &mdash; Nuvera Ch. 10 &amp; 910HD or Mediacom Ch. 8 &amp; 107.3</p>
+    <h2>{{ worship.heading }}</h2>
+    <p style="margin-top:6px;">{{ worship.paragraph1 }} on <a href="https://www.facebook.com/BUMC.HUTCH" target="_blank" style="color:#b5602a; text-decoration:none;">Facebook</a></p>
+    <p style="margin-top:6px;">{{ worship.paragraph2 }}</p>
   </section>
