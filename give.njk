@@ -1,40 +1,61 @@
-      - name: "give"
-        label: "Give Page"
-        file: "give.njk"
-        fields:
-          - { label: "Page Title (browser tab)", name: "title", widget: "string" }
-          - { label: "Description (for search engines)", name: "description", widget: "text" }
-          - label: "Hero (top banner)"
-            name: "hero"
-            widget: "object"
-            fields:
-              - { label: "Background Photo", name: "image", widget: "image" }
-              - { label: "Photo Description (for accessibility)", name: "imageAlt", widget: "string" }
-              - { label: "Headline", name: "heading", widget: "string" }
-          - label: "Intro"
-            name: "intro"
-            widget: "object"
-            fields:
-              - { label: "Bible Verse", name: "verse", widget: "string" }
-              - { label: "Paragraph", name: "paragraph", widget: "text" }
-          - label: "In Worship"
-            name: "inWorship"
-            widget: "object"
-            fields:
-              - { label: "Detail", name: "detail", widget: "text" }
-          - label: "By Mail"
-            name: "byMail"
-            widget: "object"
-            fields:
-              - { label: "Detail", name: "detail", widget: "text" }
-          - label: "Automatic Bank Gift (ACH)"
-            name: "automaticBank"
-            widget: "object"
-            fields:
-              - { label: "Detail", name: "detail", widget: "text" }
-          - label: "By Text"
-            name: "byText"
-            widget: "object"
-            fields:
-              - { label: "Text Code", name: "code", widget: "string" }
-              - { label: "Short Number", name: "number", widget: "string" }
+---
+layout: base.njk
+pageClass: "give"
+title: "Give"
+description: "Ways to support the ministry of Bethlehem United Methodist Church."
+permalink: "/give/"
+hero:
+  image: "/images/offering-plate-in-the-sanctuary-8e6fc29867.jpg"
+  imageAlt: "Offering plate in the sanctuary"
+  heading: "Give"
+intro:
+  verse: "\"Give, and it will be given to you.\" — Luke 6:38"
+  paragraph: "Through faith in Christ we are transformed into generous people. Regular giving helps keep our church alive and reminds us to always put God first."
+inWorship:
+  detail: "Place a gift in the offering plates located in the back of the sanctuary."
+byMail:
+  detail: "Send gifts to 665 Miller Ave SW, Hutchinson, MN 55350"
+automaticBank:
+  detail: "Contact the church office to set up a recurring gift directly from your bank account."
+byText:
+  code: "GROWBUMC"
+  number: "44321"
+---
+<div class="hero">
+    <img src="{{ hero.image }}" alt="{{ hero.imageAlt }}">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>{{ hero.heading }}</h1>
+    </div>
+  </div>
+
+  <section class="band-light section-narrow">
+    <div class="intro">
+      <p class="verse">{{ intro.verse }}</p>
+      <p>{{ intro.paragraph }}</p>
+    </div>
+
+    <h2 style="text-align:center; margin-bottom:20px;">Ways to give</h2>
+    <ul class="give-list">
+      <li>
+        <div class="label">In worship</div>
+        <div class="detail">{{ inWorship.detail }}</div>
+      </li>
+      <li>
+        <div class="label">By mail</div>
+        <div class="detail">{{ byMail.detail }}</div>
+      </li>
+      <li>
+        <div class="label">Online</div>
+        <div class="detail">Set up a one-time or recurring donation at <a href="https://secure.givelively.org/donate/hutchinson-bethlehem-united-methodist-church" target="_blank" rel="noopener">Give online</a></div>
+      </li>
+      <li>
+        <div class="label">Automatic bank gift (ACH)</div>
+        <div class="detail">{{ automaticBank.detail }}</div>
+      </li>
+      <li>
+        <div class="label">By text</div>
+        <div class="detail">Text <strong>{{ byText.code }}</strong> to <strong>{{ byText.number }}</strong></div>
+      </li>
+    </ul>
+  </section>
