@@ -229,7 +229,40 @@ collections:
         fields:
           - { label: "Page Title (browser tab)", name: "title", widget: "string" }
           - { label: "Description (for search engines)", name: "description", widget: "text" }
-          - { label: "Page Content (HTML)", name: "body", widget: "code", default_language: "html", allow_language_selection: false, output_code_only: true }
+          - label: "Hero (top banner)"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Background Photo", name: "image", widget: "image" }
+              - { label: "Photo Description (for accessibility)", name: "imageAlt", widget: "string" }
+              - { label: "Headline", name: "heading", widget: "string" }
+          - label: "Intro"
+            name: "intro"
+            widget: "object"
+            fields:
+              - { label: "Bible Verse", name: "verse", widget: "string" }
+              - { label: "Paragraph", name: "paragraph", widget: "text" }
+          - label: "In Worship"
+            name: "inWorship"
+            widget: "object"
+            fields:
+              - { label: "Detail", name: "detail", widget: "text" }
+          - label: "By Mail"
+            name: "byMail"
+            widget: "object"
+            fields:
+              - { label: "Detail", name: "detail", widget: "text" }
+          - label: "Automatic Bank Gift (ACH)"
+            name: "automaticBank"
+            widget: "object"
+            fields:
+              - { label: "Detail", name: "detail", widget: "text" }
+          - label: "By Text"
+            name: "byText"
+            widget: "object"
+            fields:
+              - { label: "Text Code", name: "code", widget: "string" }
+              - { label: "Short Number", name: "number", widget: "string" }
 
       - name: "contact"
         label: "Contact Page"
