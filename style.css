@@ -12,7 +12,7 @@ header {
   padding: 18px 32px; background: #ffffff; border-bottom: 1px solid #e8e2d6;
   position: sticky; top: 0; z-index: 10;
 }
-header img { height: 64px; }
+header img { height: 88px; }
 .logo { font-size: 20px; font-weight: bold; color: #3b2a1a; letter-spacing: 0.5px; }
 nav a {
   margin-left: 22px; text-decoration: none; color: #5a5346; font-size: 14px;
@@ -111,7 +111,7 @@ footer a { color: #e0b98a; text-decoration: none; }
 /* ===== Mobile ===== */
 @media (max-width: 700px) {
   header { padding: 14px 20px; flex-wrap: wrap; gap: 10px; }
-  header img { height: 48px; }
+  header img { height: 64px; }
   nav a { margin-left: 12px; font-size: 12.5px; }
   .hero { height: 220px !important; }
   .page-home .hero { height: 420px !important; }
