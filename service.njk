@@ -30,6 +30,7 @@ trunkOrTreat:
 midwestMission:
   heading: "Midwest Mission Collection Site"
   paragraph1: "Bethlehem serves as a regional collection site for Midwest Mission, supporting projects like Dignity Kits and school supply drives for children in need around the world."
+  note: "If you're looking to donate items through Midwest Mission, please start at <a class=\"link-out\" href=\"https://www.midwestmission.org/collection-sites\" target=\"_blank\">midwestmission.org</a> or call 217-483-7911 &mdash; they can answer questions about what's needed and connect you with drop-off details."
   image: "/images/dignity-kit-packing-b6558908ce.jpg"
   imageAlt: "Dignity Kit packing"
 cta:
@@ -90,7 +91,7 @@ cta:
       <div class="text-col">
         <h2>{{ midwestMission.heading }}</h2>
         <p>{{ midwestMission.paragraph1 }}</p>
-        <p style="margin-top:10px; font-size:14px;">If you're looking to donate items through Midwest Mission, please start at <a class="link-out" href="https://www.midwestmission.org/collection-sites" target="_blank">midwestmission.org</a> &mdash; they can answer questions about what's needed and connect you with drop-off details.</p>
+        <p style="margin-top:10px; font-size:14px;">{{ midwestMission.note | safe }}</p>
       </div>
     </div>
   </section>

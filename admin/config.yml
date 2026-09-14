@@ -221,6 +221,7 @@ collections:
             fields:
               - { label: "Heading", name: "heading", widget: "string" }
               - { label: "Paragraph", name: "paragraph1", widget: "text" }
+              - { label: "Note (HTML allowed, e.g. for links)", name: "note", widget: "text" }
               - { label: "Photo", name: "image", widget: "image" }
               - { label: "Photo Description (for accessibility)", name: "imageAlt", widget: "string" }
           - label: "See It in Action"
